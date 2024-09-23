@@ -95,6 +95,11 @@ A biblioteca **servo_tools** é complementar a biblioteca SERVO_HW com funções
 ![diagrama de blocos](images/block_diagram.png)  
 
 # Esquemático
+
+> [!WARNING]  
+> Apesar do regulador de tensão do ESP32 trabalhar em um range de 5 - 12 V, para esse projeto não vamos poder ultrapassar os 6V pois o pino VIN usado para alimentar os servos, utiliza a tensão de entrada da placa sem passar pelo regulador. Foi optado utilizar esse pino pois os servos estão consumindo cerca de 150 mA ao movimentar, e como os pinos da ESP32 aceitam no maximo 40mA de consumo, certamenta iria danificar os pinos do microcontrolador.
+
+
 ![esquemático](images/esquematico.png)
 
 # Diagrama de arquitetura
@@ -105,6 +110,10 @@ A biblioteca **servo_tools** é complementar a biblioteca SERVO_HW com funções
 
 
 ***[Video Explicativo - Entrega 02 - Servo - Sistemas Embarcados [Youtube]](https://www.youtube.com/watch?v=dHcb04kcQVU)***
+
+# Video mostrando funcionamento do circuito
+
+***[Demonstração do projeto Servo-Axis-Control [Youtube]](https://youtube.com/shorts/DxNH4GY1BXM?feature=share)***
 
 # Máquina de estados
 ![Maquina de Estados](images/state_machine.png)
